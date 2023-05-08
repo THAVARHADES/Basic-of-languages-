@@ -394,7 +394,7 @@ import java.util.*;
  * }
  * }
  */
-class class1 {
+/*class class1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the String");
@@ -408,5 +408,23 @@ class class1 {
         }
         String ch3 = new String(ch2);
         System.out.println(ch3);
+    }
+}*/
+class class1 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Eneter the String");
+        String s = scan.nextLine();
+        String strarr[] = s.split(" ");
+        String revstr = "";
+        for (int i = 0; i <= strarr.length - 1; i++) {
+            String word = strarr[i];
+            String revword = " ";
+            for (int j = word.length() - 1; j >= 0; j--) {
+                revword = revword + word.charAt(j);
+            }
+            revstr = revstr + revword + " ";
+        }
+        System.out.print(revstr);
     }
 }
