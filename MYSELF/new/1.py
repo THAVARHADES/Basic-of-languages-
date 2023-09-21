@@ -7,7 +7,7 @@ from gtts import gTTS
 import os
   
 # The text that you want to convert to audio
-mytext = 'Harshit gaandu thooda saa paadna dee'
+mytext = 'my name is thavar'
   
 # Language in which you want to convert
 language = 'en'

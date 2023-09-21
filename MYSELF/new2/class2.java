@@ -1,5 +1,6 @@
 import java.util.*;
 
+/*
 class StringExample {
     String subStr(String str, int index) {
         char arr1[] = str.toCharArray();
@@ -46,5 +47,11 @@ class class2 {
         int ei = scan.nextInt();
         String s2 = s.substr(a, si, ei);
         System.out.println(s2);
+    }
+}
+*/
+class class2 {
+    public static void main(String[] args) {
+        
     }
 }

@@ -1,69 +1,64 @@
-class Class46 {
-    void merge(int arr[], int l, int m, int r) {
+class Class46{
+    void merge(int arr[], int l, int m, int r){
         int n1 = m - l + 1;
         int n2 = r - m;
-        int L[] = new int[n1];
-        int R[] = new int[n2];
-        // Initializing the first array
-        for (int i = 0; i < n1; ++i)
+        int L[] = new int [n1];
+        int R[] = new int [n2];
+        
+        for (int i=0; i<n1; ++i)
             L[i] = arr[l + i];
-        // Intialization of the second Array for comparing with the first loop
-        for (int j = 0; j < n2; ++j)
-            R[j] = arr[m + 1 + j];
+        
+            for (int j=0; j<n2; ++j)
+            R[j] = arr[m + 1+ j];
         int i = 0, j = 0;
         int k = l;
-        //
-        while (i < n1 && j < n2) {
-            if (L[i] <= R[j]) {
+        
+        while (i < n1 && j < n2){
+            if (L[i] <= R[j]){
                 arr[k] = L[i];
                 i++;
-            } else {
+            }
+            else{
                 arr[k] = R[j];
                 j++;
             }
             k++;
         }
-        //
-        while (i < n1) {
+        
+        while (i < n1){
             arr[k] = L[i];
             i++;
             k++;
         }
-        //
-        while (j < n2) {
+        while (j < n2){
             arr[k] = R[j];
             j++;
             k++;
         }
     }
-
-    // Code for merging the elements
-    void sort(int arr[], int l, int r) {
-        if (l < r) {
-            int m = (l + r) / 2;
+    void sort(int arr[], int l, int r){
+        if (l < r){
+            int m = (l+r)/2;
             sort(arr, l, m);
-            sort(arr, m + 1, r);
+            sort(arr , m+1, r);
             merge(arr, l, m, r);
         }
     }
-
-    // Code for printing the element
-    static void printArray(int arr[]) {
-        //
+    static void printArray(int arr[]){
         int n = arr.length;
-        for (int i = 0; i < n; ++i)
+        for (int i=0; i<n; ++i)
             System.out.print(arr[i] + " ");
         System.out.println();
     }
-
-    public static void main(String args[]) {
-        int arr[] = { 12, 11, 13, 5, 6, 7 };
-        // Giving an array
+    public static void main(String args[]){
+        int arr[] = {12, 11, 13, 5, 6, 7};
+ 
         System.out.println("Given Array");
         printArray(arr);
-        // Sorting and merging the Elements
+ 
         Class46 ob = new Class46();
-        ob.sort(arr, 0, arr.length - 1);
+        ob.sort(arr, 0, arr.length-1);
+ 
         System.out.println("\nSorted array");
         printArray(arr);
     }
